@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link href="stilos.css" rel="stylesheet">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stilos.css') }}">
+  <title>FactScanLab</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="titulo">
+      <p>Fact<span>ScanLab</span></p>
+    </div>
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Ingresar
+      </a>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/login">Entrar</a></li>
+        <li><a class="dropdown-item" href="/registro">Registrarse</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!--contenido principal-->
+    <div class="contenido">
+      <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-noticias_114360-462.jpg?w=826&t=st=1690080116~exp=1690080716~hmac=4a6c03489c40ec309c3364e0200059329ff67c71a3a8f88a948a586b14ff36f2" alt="fakenews.jpg">
+      <p>"Descubre la verdad en un mundo de noticias falsas con nuestra plataforma web especializada en la detección de
+        información engañosa"</p>
+    </div>
+    <br>
+    <div class="contenido">
+      <h2>¿Cómo funciona?</h2>
+    </div>
+    <br>
+    <div class="tarjeta">
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Paso 1</h5>
+          <p class="card-text">Registrate en la plataforma con tu correo electrónico</p>
+          <div class="Dimg">
+            <img src= "{{ url_for('renderizar_imagen', nombre_imagen='registro.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Paso 2</h5>
+          <p class="card-text">Ingresa en el a partado nuevo para verificar la noticia</p>
+          <div class="Dimg">
+            <img src="{{ url_for('renderizar_imagen', nombre_imagen='nuevo.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Paso 3</h5>
+          <p class="card-text">Pega el texto y recibe un porcentaje de confiabilidad</p>
+          <div class="Dimg">
+            <img src="{{ url_for('renderizar_imagen', nombre_imagen='insignia-porcentaje.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+
+    <div class="contenido">
+      <div>
+        <h2>Algoritmo utilizado</h2>
+        <p>Nuestro sistema utiliza el algoritmo basado en el teorema de Bayes, el cual
+          evalúa la probabilidad de que una noticia sea falsa o verdadera por medio de palabras clave.
+          <br>
+          <br>
+          <i>Eficacia y rapidez, en cada verificación.</i>
+        </p>
+      </div>
+      <img src="{{ url_for('renderizar_imagen', nombre_imagen='algoritmo.gif') }}" alt="fakenews.jpg">
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li> <a href="#">Contacto</a></li>
+      <li><a href="#">Sobre nosotros</a></li>
+      <li><a href="#">Políticas</a></li>
+    </ul>
+  </footer>
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBbpb4OKG8y3NrQXw-IYJIQ6ehS14cwGvI",
+    authDomain: "factscanlab.firebaseapp.com",
+    projectId: "factscanlab",
+    storageBucket: "factscanlab.appspot.com",
+    messagingSenderId: "830117234505",
+    appId: "1:830117234505:web:463d55c4d2e7005821fc98"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+</html>

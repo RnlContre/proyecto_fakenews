@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>FactScanLab</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stilos.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="registro">
+      <img src="https://images.pexels.com/photos/205316/pexels-photo-205316.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="600px" height="600px">
+      <span class="border-end"></span>
+      
+      <form action="/registro" method="post">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name="nombre" required>
+          <label for="floatingInput">Nombre y apellido</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingInput" placeholder="Contraseña" name="contrasena" required>
+          <label for="floatingInput">Contraseña</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" name="contrasena2" required>
+          <label for="floatingPassword">Confirmar contraseña</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
+</body>
+
+</html>

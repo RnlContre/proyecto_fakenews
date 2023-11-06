@@ -1,0 +1,27 @@
+
+body.desenfoque {
+    background-image: url("../static/IMG/login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    filter: blur(5px); /* Ajusta el valor del desenfoque según tu preferencia */
+}
+
+.registro{
+    display: block;
+    background-color: azure;
+    width: 50%;
+    
+}
+
+.registro form{
+    width: 100%;
+    padding: 100px;
+}
+
+.mensajeError{
+    
+    transition: background-color 5.5s;
+}
